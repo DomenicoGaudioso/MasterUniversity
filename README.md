@@ -1,4 +1,4 @@
 # Magistrale - Università
  Progetti, script e materiale utile fatto durante il percorso universitario
 ![Screenshot](LogoCherubino.png)
-![Screenshot](Facciata.png)
+![Screenshot](Facciata.jpg)
