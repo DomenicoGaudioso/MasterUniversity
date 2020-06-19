@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\renewcommand*\familydefault{\ttdefault}
+\usepackage{listings}
+
+\lstset{
+	language=Python,
+	showstringspaces=false,
+	formfeed=\newpage,
+	tabsize=4,
+	commentstyle=\itshape,
+	basicstyle=\ttfamily,
+	morekeywords={models, lambda, forms}
+}
+
+\newcommand{\code}[2]{
+	\hrulefill
+	\subsection*{#1}
+	\lstinputlisting{#2}
+	\vspace{2em}
+}
+
+\begin{document}
+	
+	
+	\begin{lstlisting}
+	def factorial(n):
+	"""The factorial of a number the slow way"""
+	
+	# comments are printed in italic
+	if n == 0:
+	return 1
+	else:
+	return n * factorial(n-1)
+	\end{lstlisting}
+	
+	%% Use this to include files
+	\code{Models}{Legami.py}
+	
+\end{document}

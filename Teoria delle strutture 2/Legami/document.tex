@@ -1,0 +1,52 @@
+\documentclass [a4paper,10pt]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\renewcommand*\familydefault{\ttdefault}
+\usepackage{listings}
+
+
+\lstset{
+	language=Python,
+	showstringspaces=false,
+	formfeed=\newpage,
+	tabsize=2,
+	commentstyle=\itshape,
+	basicstyle=\ttfamily,
+	morekeywords={models, lambda, forms}
+}
+
+\newcommand{\code}[2]{
+	\hrulefill
+	\subsection*{#1}
+	\lstinputlisting{#2}
+	\vspace{2em}
+}
+
+\begin{document}
+	\section{MODELLO ELASTICO - PERFETTAMENTE PLASTICO }
+	%% Use this to include files
+	\code{}{Mod_EP.py} 
+	\newpage
+	
+	\section{MODELLO ELASTO PLASTICO INCRUDENTE}
+	\code{}{Mod_EPI.py}
+	\newpage
+	
+	\section{MODELLO DI TENTATIVO 1 }
+	\code{}{Mod_EPI_buono.py}
+	\newpage
+	
+	\section{MODELLO DI TENTATIVO 2}
+	\code{ }{Mod_EPIassoluto_buono.py}
+	\newpage
+	
+	
+	\section{MODELLO ELASTO PLASTICO ISOTROPO INCRUDENTE}
+	\code{ }{Mod_EPII.py}
+	
+	
+\end{document}
