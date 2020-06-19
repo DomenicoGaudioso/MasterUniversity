@@ -1,0 +1,57 @@
+\documentclass [a4paper,10pt]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{beramono}
+\renewcommand*\familydefault{\ttdefault}
+\usepackage{listings}
+\usepackage{graphicx}
+
+\usepackage{float} % serve per importare immagini
+
+
+
+
+
+\lstset{
+	language=Python,
+	showstringspaces=false,
+	formfeed=\newpage,
+	tabsize=2,
+	commentstyle=\itshape,
+	basicstyle=\ttfamily,
+	morekeywords={models, lambda, forms}
+}
+
+\newcommand{\code}[2]{
+	\hrulefill
+	\subsection*{#1}
+	\lstinputlisting{#2}
+	\vspace{2em}
+}
+
+\begin{document}
+	
+	
+	%% Use this to include files
+	\code{PROPIETA' DELLA SEZIONE }{Prop_sez.py}
+	\newpage
+	\code{SOLUZIONE LINEA ELASTICA PER LA FLESSIONE }{LE_Bending.py}
+	\newpage
+	\code{SOLUZIONE LINEA ELASTICA PER LA TORSIONE }{LE_Torsion.py}
+	\newpage
+	\code{CALCOLO DELLE TENSIONI }{Tension.py}
+	\newpage
+	\code{VALORI NUMERICI }{Numerico.py}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1,angle=90 ]{Cattura.png}
+		\caption{VALORI}
+		\label{valori}
+	\end{figure}
+	
+	
+\end{document}
